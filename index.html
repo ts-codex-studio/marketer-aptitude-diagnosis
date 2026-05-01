@@ -359,6 +359,26 @@
       display: grid;
       gap: 16px;
       align-self: start;
+      max-height: calc(100vh - 24px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-right: 6px;
+      scrollbar-gutter: stable;
+    }
+
+    .sidebar-column::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .sidebar-column::-webkit-scrollbar-thumb {
+      background: rgba(121, 168, 255, 0.24);
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+    }
+
+    .sidebar-column::-webkit-scrollbar-track {
+      background: transparent;
     }
 
     .hud {
@@ -1223,6 +1243,9 @@
 
       .sidebar-column {
         position: static;
+        max-height: none;
+        overflow: visible;
+        padding-right: 0;
       }
     }
 
